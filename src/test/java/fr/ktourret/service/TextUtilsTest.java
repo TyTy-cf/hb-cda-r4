@@ -35,4 +35,21 @@ public class TextUtilsTest {
         assertFalse(textUtils.isALegitPassword("NotShortButKO"));
     }
 
+    // PALINDROME
+
+    @Test
+    public void testSuccessNotPalindrome() {
+        assertFalse(textUtils.isPalindrome("toto"));
+    }
+
+    @Test
+    public void testSuccessPalindromeNull() {
+        assertFalse(textUtils.isPalindrome(null));
+    }
+
+    @Test
+    public void testSuccessPalindrome() {
+        assertTrue(textUtils.isPalindrome("À révéler mon nom, mon nom relèvera"));
+    }
+
 }
