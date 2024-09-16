@@ -11,6 +11,7 @@ public class TextUtils {
     }
 
     public boolean isPalindrome(String str) {
+        if (str == null || str.isEmpty()) return false;
         str = str.toLowerCase()
                 .replace('é', 'e')
                 .replace('è', 'e')
